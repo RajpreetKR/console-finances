@@ -85,10 +85,15 @@ var finances = [
   ['Dec-2016', 60988],
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
-];
+]; // 2d array (an array in an array)
 
 // total number of months in the finance array
-let totalMonths = finances.length; // .length returns the number of elements in the finances array thus giving the number of months listed
-console.log ("Total Months: " +  totalMonths); // testing to see if it outputs the correct number of months (86)
+let totalMonths = finances.length; // used let instead of var as my research suggested that it's best practice to use let in place of var wherever possible
+console.log ("Total Months: " +  totalMonths); // working
 
-
+// net total amount of profit/losses in the finance array
+let netTotal = 0;
+for (let i = 0; i < finances.length; i++) {
+  netTotal += finances[i][1]; // missed the [1] so it only gave me the array as a result as i had forgotten this was an array in an array
+}
+console.log ("Net Total: " + netTotal); // testing to see if it outputs the correct number
