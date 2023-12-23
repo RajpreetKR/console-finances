@@ -87,13 +87,16 @@ var finances = [
   ['Feb-2017', 671099],
 ]; // 2d array (an array in an array)
 
-// total number of months in the finance array
+// total number of months in the dataset --working
 let totalMonths = finances.length; // used let instead of var as my research suggested that it's best practice to use let in place of var wherever possible
-console.log ("Total Months: " +  totalMonths); // working
 
-// net total amount of profit/losses in the finance array
+// net total amount of profit/losses over the entire period --working
 let netTotal = 0;
 for (let i = 0; i < finances.length; i++) {
   netTotal += finances[i][1]; // missed the [1] so it only gave me the array as a result as i had forgotten this was an array in an array
 }
-console.log ("Net Total: " + netTotal); // testing to see if it outputs the correct number
+
+// average changes in profit/losses for the entire period --wip
+
+// final output --working --ADD TO LATER
+console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal);
