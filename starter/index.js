@@ -98,5 +98,6 @@ for (let i = 0; i < finances.length; i++) {
 
 // average changes in profit/losses for the entire period --wip
 
+
 // final output --working --ADD TO LATER
-console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal);
+console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal + "\n";
