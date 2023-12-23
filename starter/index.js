@@ -87,4 +87,8 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// total number of months in the finance array
+let totalMonths = finances.length; // .length returns the number of elements in the finances array thus giving the number of months listed
+console.log ("Total Months: " +  totalMonths); // testing to see if it outputs the correct number of months (86)
+
 
