@@ -101,7 +101,7 @@ let change = 0;
 for (let i = 1; i < finances.length; i++) {
   change += finances[i][1] - finances[i-1][1];
 }
-averageChange = change / totalMonths - 1;
+let averageChange = change / (totalMonths - 1);
 
 // final output --working --ADD TO LATER
 console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal + "\n" + "Average Change: " + averageChange + "\n");
