@@ -88,16 +88,20 @@ var finances = [
 ]; // 2d array (an array in an array)
 
 // total number of months in the dataset --working
-let totalMonths = finances.length; // used let instead of var as my research suggested that it's best practice to use let in place of var wherever possible
+const totalMonths = finances.length; // using const and let instead of var as my research suggested that it's best practice to use let in place of var wherever possible
 
 // net total amount of profit/losses over the entire period --working
-let netTotal = 0;
+let netTotal = 0; // using const here caused an error so used let
 for (let i = 0; i < finances.length; i++) {
   netTotal += finances[i][1]; // missed the [1] so it only gave me the array as a result as i had forgotten this was an array in an array
 }
 
 // average changes in profit/losses for the entire period --wip
-
+let change = 0;
+for (let i = 1; i < finances.length; i++) {
+  change += finances[i][1] - finances[i-1][1];
+}
+averageChange = change / totalMonths - 1;
 
 // final output --working --ADD TO LATER
-console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal + "\n";
+console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal + "\n" + "Average Change: " + averageChange + "\n");
