@@ -107,10 +107,24 @@ averageChange = averageChange.toFixed(2);
 // greatest increase in profits
 let greatestProfit = 0;
 let greatestMonth;
+for (let i = 1; i < finances.length; i++) {
+  change = finances[i][1] - finances[i-1][1];
+  if (change > greatestProfit) {
+    greatestProfit = change;
+    greatestMonth = finances[i][0];
+  }
+}
 
 // greatest decrease in losses
 let worstLoss = 0;
 let worstMonth;
+for (let i = 1; i < finances.length; i++) {
+  change = finances[i][1] - finances[i-1][1];
+  if (change < worstLoss) {
+    worstLoss = change;
+    worstMonth = finances[i][0];
+  }
+}
 
 // final output --working --ADD TO LATER
-console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal + "\n" + "Average Change: " + averageChange + "\n");
+console.log("Finacial Report \n" + "---------------------------- \n" + "Total Months: " + totalMonths + "\n" + "Total: $" + netTotal + "\n" + "Average Change: " + averageChange + "\n" + "Greatest Increase in Profits/Losses: " + greatestMonth + " ($" + greatestProfit + ")" + "\n" + "Greatest Decrease in Profits/Losses: " + worstMonth + " ($" + worstLoss + ")");
